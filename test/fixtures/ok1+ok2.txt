@@ -1,0 +1,10 @@
+TAP version 13
+# ok1
+ok 1 test 1
+# ok2
+ok 2 test 2
+1..2
+# tests 2
+# pass  2
+
+# ok

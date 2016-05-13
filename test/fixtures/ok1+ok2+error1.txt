@@ -1,0 +1,13 @@
+TAP version 13
+# ok1
+ok 1 test 1
+# ok2
+ok 2 test 2
+# error1a
+ok 3 error1a
+# error1b
+not ok 4 error1.js
+1..4
+# tests 4
+# pass  3
+# fail  1

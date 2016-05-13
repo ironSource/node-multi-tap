@@ -1,0 +1,44 @@
+{
+  "name": "multi-tap",
+  "version": "0.0.5",
+  "description": "Spawn concurrent tests and merge tap protocol output",
+  "license": "MIT",
+  "author": "Vincent Weevers",
+  "main": "lib/index.js",
+  "bin": "lib/bin.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prepublish": "npm t",
+    "test": "tape test/*.js"
+  },
+  "dependencies": {
+    "after": "~0.8.1",
+    "cross-spawn-async": "~2.2.2",
+    "existent": "~1.0.1",
+    "glob": "~7.0.0",
+    "minimist": "~1.2.0",
+    "multistream": "~2.0.2",
+    "pump": "~1.0.1",
+    "tap-parser": "~1.2.2",
+    "through2": "~2.0.1"
+  },
+  "devDependencies": {
+    "concat-stream": "~1.5.1",
+    "tape": "~4.5.1"
+  },
+  "keywords": [
+    "test",
+    "tap",
+    "tape",
+    "tap-protocol"
+  ],
+  "repository": "https://github.com/ironSource/node-multi-tap",
+  "bugs": "https://github.com/ironSource/node-multi-tap/issues",
+  "homepage": "https://github.com/ironSource/node-multi-tap",
+  "engines": {
+    "node": ">=4.0.0",
+    "npm": ">=2.0.0"
+  }
+}

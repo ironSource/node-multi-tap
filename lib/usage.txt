@@ -1,0 +1,21 @@
+multi-tap [options] pattern(s)
+
+Spawn concurrent tests and merge tap protocol output. Supports:
+
+ - *.js files
+ - package.json files
+ - package directories
+
+Options
+
+ --runner  -r  command for js entries ("node")
+ --basedir -b  resolve patterns from this path (cwd)
+ --cwd     -c  working directory for js entry runners (cwd)
+ --stderr  -e  inherit stderr (false)
+ --version -v  print multi-tap version and exit
+
+Examples
+
+ > multi-tap test-*.js packages/*
+ > multi-tap --basedir lib/packages one two | tap-spec
+ > multi-tap -e --runner beep --cwd /tmp test/*.js
