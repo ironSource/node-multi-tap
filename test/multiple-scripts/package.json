@@ -1,0 +1,14 @@
+{
+  "name": "multiple-scripts",
+  "scripts": {
+    "test": "node test.js test",
+
+    "test:a": "node test.js test:a",
+    "test:b": "node test.js test:b",
+
+    "deep:a:b": "node test.js deep:a:b",
+    "deep:a:b:c": "node test.js deep:a:b:c",
+
+    "fail": "node test.js fail fail"
+  }
+}
