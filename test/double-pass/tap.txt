@@ -1,0 +1,18 @@
+TAP version 13
+# name
+ok 1 should be equal
+ok 2 ok
+ok 3 # skip
+ok 4 # skip message
+ok 5 ok # skip
+ok 6 ok # skip message
+ok 7 # todo
+# name 2
+ok 8 # todo message
+ok 9 ok # todo
+ok 10 ok # todo message
+not ok 11
+1..11
+# tests 11
+# pass  10
+# fail  1
