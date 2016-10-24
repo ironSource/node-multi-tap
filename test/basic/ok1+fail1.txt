@@ -6,7 +6,8 @@ not ok 2 should be equal
   ---
     operator: equal
     expected: 3
-    actual:   2
+    actual: 2
+    at: 'Test.fail1 (${dir}fail1.js:2:5)'
   ...
 
 1..2

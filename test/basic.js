@@ -3,6 +3,7 @@
 const test = require('tape')
     , concat = require('concat-stream')
     , fs = require('fs')
+    , path = require('path')
     , multi = require('../')
 
 test('passing', function (t) {
@@ -36,11 +37,17 @@ test('error', function (t) {
 })
 
 function run(tests, t) {
-  const path = `${__dirname}/fixtures/${tests.join('+')}.txt`
-  const expected = fs.readFileSync(path, 'utf8')
+  const expected = template(`${tests.join('+')}.txt`)
 
-  multi(tests.map(t => `${t}.js`), { basedir: __dirname + '/fixtures' })
+  multi(tests.map(t => `${t}.js`), { basedir: __dirname + '/basic' })
     .pipe(concat(function (output) {
-      t.equal(String(output), expected)
+      t.equal(String(output).trim(), expected.trim())
     }))
+}
+
+function template(file) {
+  const dir = path.join(__dirname, 'basic')
+  const tpl = fs.readFileSync(path.join(dir, file), 'utf8')
+
+  return tpl.replace(/\$\{dir\}/g, dir + path.sep)
 }

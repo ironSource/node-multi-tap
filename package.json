@@ -14,19 +14,24 @@
     "test": "tape test/*.js"
   },
   "dependencies": {
-    "after": "~0.8.1",
-    "cross-spawn-async": "~2.2.2",
+    "after": "~0.8.2",
+    "common-prefix": "~1.1.0",
+    "cross-spawn": "~4.0.2",
+    "debug": "~2.2.0",
     "existent": "~1.0.1",
-    "glob": "~7.0.0",
+    "glob": "~7.1.1",
+    "js-yaml": "~3.6.1",
+    "micromatch": "~2.3.11",
     "minimist": "~1.2.0",
-    "multistream": "~2.0.2",
+    "multistream": "~2.1.0",
     "pump": "~1.0.1",
-    "tap-parser": "~1.2.2",
-    "through2": "~2.0.1"
+    "tap-parser": "~3.0.3",
+    "through2": "~2.0.1",
+    "xtend": "~4.0.1"
   },
   "devDependencies": {
-    "concat-stream": "~1.5.1",
-    "tape": "~4.5.1"
+    "concat-stream": "~1.5.2",
+    "tape": "~4.6.2"
   },
   "keywords": [
     "test",
