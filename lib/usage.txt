@@ -8,14 +8,18 @@ Spawn concurrent tests and merge tap protocol output. Supports:
 
 Options
 
- --runner  -r  command for js entries ("node")
- --basedir -b  resolve patterns from this path (cwd)
- --cwd     -c  working directory for js entry runners (cwd)
- --stderr  -e  inherit stderr (false)
- --version -v  print multi-tap version and exit
+ --run            -r  npm script(s) to run ("test")
+ --ignore-missing -i  don't fail on missing npm scripts (false)
+ --basedir        -b  resolve patterns from this path (cwd)
+ --cwd            -c  working directory for js entries (cwd)
+ --binary      --bin  command for js entries ("node")
+ --stderr         -e  inherit standard error (false)
+ --fail-fast      -f  if a test fails, cancel subsequent tests (false)
+ --version        -v  print multi-tap version and exit
 
 Examples
 
- > multi-tap test-*.js packages/*
- > multi-tap --basedir lib/packages one two | tap-spec
- > multi-tap -e --runner beep --cwd /tmp test/*.js
+ > multi-tap packages/* | tap-spec
+ > multi-tap one two -b packages -r test:*
+ > multi-tap packages/{one,two} -r test:*
+ > multi-tap -efi
