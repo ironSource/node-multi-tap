@@ -1,7 +1,7 @@
 {
   "name": "multi-tap",
   "version": "0.0.6",
-  "description": "Spawn concurrent tests and merge tap protocol output",
+  "description": "Spawn and merge tap-producing tests",
   "license": "MIT",
   "author": "Vincent Weevers",
   "main": "lib/index.js",
