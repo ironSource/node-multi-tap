@@ -1,6 +1,6 @@
 {
   "name": "multi-tap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Spawn and merge tap-producing tests",
   "license": "MIT",
   "author": "Vincent Weevers",
