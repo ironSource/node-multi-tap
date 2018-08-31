@@ -10,7 +10,6 @@
     "lib"
   ],
   "scripts": {
-    "prepublish": "npm t",
     "check:missing": "dependency-check package.json lib/bin.js",
     "check:unused": "dependency-check package.json lib/bin.js --unused --no-dev",
     "test": "npm-run-all --silent check:* 1>&2 && tape test/*.js"
