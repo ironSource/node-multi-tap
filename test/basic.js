@@ -4,6 +4,7 @@ const test = require('tape')
     , concat = require('concat-stream')
     , fs = require('fs')
     , path = require('path')
+    , removeStackTrace = require('./util/remove-stack-trace')
     , multi = require('../')
 
 test('passing', function (t) {
@@ -41,7 +42,7 @@ function run(tests, t) {
 
   multi(tests.map(t => `${t}.js`), { basedir: __dirname + '/basic' })
     .pipe(concat(function (output) {
-      t.equal(String(output).trim(), expected.trim())
+      t.equal(removeStackTrace(String(output)).trim(), expected.trim())
     }))
 }
 

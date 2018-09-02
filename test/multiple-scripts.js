@@ -4,6 +4,7 @@ const test = require('tape')
     , execFile = require('child_process').execFile
     , resolve = require('path').resolve
     , concat = require('concat-stream')
+    , removeStackTrace = require('./util/remove-stack-trace')
     , bin = resolve(__dirname, '..', 'lib', 'bin.js')
     , cwd = resolve(__dirname, 'multiple-scripts')
     , filename = resolve(cwd, 'test.js')
@@ -200,7 +201,7 @@ test('-r fail', function (t) {
 
     // console.error('---\n' + stdout + '\n---')
 
-    t.is(stdout.trim(), wrap([
+    t.is(removeStackTrace(stdout.trim()), wrap([
       '# name',
       'ok 1 fail',
       'not ok 2 fail',
@@ -226,7 +227,7 @@ test('-r test:a -r fail -r test:b', function (t) {
 
     // console.error('---\n' + stdout + '\n---')
 
-    t.is(stdout.trim(), wrap([
+    t.is(removeStackTrace(stdout.trim()), wrap([
       '# test:a › name',
       'ok 1 test:a',
       '# fail › name',
@@ -257,7 +258,7 @@ test('-r test:a -r fail -r test:b --fail-fast', function (t) {
 
     // console.error('---\n' + stdout + '\n---')
 
-    t.is(stdout.trim(), wrap([
+    t.is(removeStackTrace(stdout.trim()), wrap([
       '# test:a › name',
       'ok 1 test:a',
       '# fail › name',
