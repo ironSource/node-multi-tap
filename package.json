@@ -27,7 +27,7 @@
     "multistream": "~2.1.0",
     "pump": "^3.0.0",
     "tap-parser": "~3.0.3",
-    "through2": "~2.0.1",
+    "through2": "^3.0.1",
     "xtend": "~4.0.1"
   },
   "devDependencies": {
