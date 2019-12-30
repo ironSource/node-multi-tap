@@ -24,7 +24,7 @@
     "js-yaml": "^3.13.1",
     "micromatch": "^4.0.2",
     "minimist": "~1.2.0",
-    "multistream": "~2.1.0",
+    "multistream": "^4.0.0",
     "pump": "^3.0.0",
     "tap-parser": "^10.0.1",
     "through2": "^3.0.1",
