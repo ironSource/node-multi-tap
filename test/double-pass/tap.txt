@@ -12,6 +12,9 @@ ok 8 # todo message
 ok 9 ok # todo
 ok 10 ok # todo message
 not ok 11
+# failed 1 of 11 tests
+# skip: 4
+# todo: 4
 1..11
 # tests 11
 # pass  10
