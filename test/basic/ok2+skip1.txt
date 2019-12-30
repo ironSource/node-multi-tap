@@ -3,6 +3,7 @@ TAP version 13
 ok 1 test 2
 # skip1
 ok 2 true # skip
+# skip: 1
 1..2
 # tests 2
 # pass  2

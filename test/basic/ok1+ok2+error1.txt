@@ -6,6 +6,8 @@ ok 2 test 2
 # error1a
 ok 3 error1a
 # error1b
+# test count(1) != plan(null)
+# failed 1 test
 not ok 4 error1.js exited with code 1
 1..4
 # tests 4
